@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="M.IV Calendria">
-<link rel="apple-touch-icon" href="pwa-assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#20242a;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 header{background:rgba(255,255,255,.96);border-bottom:1px solid #dfe3e8;padding:18px 24px 12px;position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
@@ -29,7 +29,7 @@ table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden}th,td
 </style>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 </head><body>
-<header><div style="display:flex;align-items:center;gap:12px"><img src="pwa-assets/icon-192.png" alt="M.IV Calendria" style="width:48px;height:48px;border-radius:12px"><div><h1>M.IV Calendria</h1><div class="sub">Pianificazione intelligente delle riunioni scolastiche · V22.1 PWA</div></div><button id="installBtn" class="primary" style="margin-left:auto;display:none" onclick="installPWA()">📲 Installa app</button></div>
+<header><div style="display:flex;align-items:center;gap:12px"><img src="icon-192.png" alt="M.IV Calendria" style="width:48px;height:48px;border-radius:12px"><div><h1>M.IV Calendria</h1><div class="sub">Pianificazione intelligente delle riunioni scolastiche · V22.1 PWA</div></div><button id="installBtn" class="primary" style="margin-left:auto;display:none" onclick="installPWA()">📲 Installa app</button></div>
 <nav id="mainNav"><button data-page="dashboard" onclick="show('dashboard')">Dashboard</button><button data-page="sessions" onclick="show('sessions')">📚 Calendari</button><button data-page="calendar" onclick="show('calendar')">Calendario</button><button data-page="groups" onclick="show('groups')">Gruppi</button><button data-page="issues" onclick="show('issues')">Controlli</button></nav></header>
 <main>
 <section id="dashboard">
