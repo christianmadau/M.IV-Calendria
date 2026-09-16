@@ -1,6 +1,7 @@
 name: Fix dashboard icon
 
 on:
+  push:
   workflow_dispatch:
 
 permissions:
