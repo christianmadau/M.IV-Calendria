@@ -1,0 +1,30 @@
+name: Fix dashboard icon
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix icon paths in dashboard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('href="pwa-assets/apple-touch-icon.png"', 'href="apple-touch-icon.png"')
+          s = s.replace('src="pwa-assets/icon-192.png"', 'src="icon-192.png"')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Commit fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Fix dashboard icon paths"
+          git push
